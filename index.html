@@ -9,6 +9,25 @@
 <body>
     <div class="frame">
         <p class="Heading">Himanshu Calculator</p>
+        <script>
+            let r = 255, g = 0, b = 0;
+            let direction = 1;
+
+            function updateShadow() {
+                r = (r + direction * 2) % 256;
+                g = (g + direction * 3) % 256;
+                b = (b + direction * 4) % 256;
+
+                document.documentElement.style.setProperty('--r', r);
+                document.documentElement.style.setProperty('--g', g);
+                document.documentElement.style.setProperty('--b', b);
+
+                requestAnimationFrame(updateShadow);
+            }
+
+            updateShadow();
+        </script>
+
         <div class="display">
             <input type="text" id="display">
         </div>

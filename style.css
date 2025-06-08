@@ -6,21 +6,28 @@
 }
 
 body{
-    background-color: rgb(178, 215, 203);
+    background-color: rgb(103, 106, 105);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+:root {
+    --r: 255;
+    --g: 0;
+    --b: 0;
+}
 
-.frame
-{
+.frame {
     height: 600px;
     width: 500px;
-    background-color: rgb(123, 224, 224);
+    background-color: rgb(71, 92, 92);
     padding: 10px;
-    box-shadow: 5px 5px 15px;
+    box-shadow: 0 0 255px rgba(var(--r), var(--g), var(--b), 10);
+    transition: box-shadow 0.3s ease;
+    border-radius: 25px;
 }
+
 .Heading{
     text-align: center;
     font-size: 25px;
